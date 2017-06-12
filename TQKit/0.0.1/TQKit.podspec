@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "TQKit/TQKit/**", "TQKit/TQKit/**/*.{h,m}"
+  s.source_files  = "TQKit/TQKit/3rdLib/**/*", "TQKit/TQKit/**/*.{h,m}"
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
