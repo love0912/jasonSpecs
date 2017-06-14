@@ -26,4 +26,27 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+    s.subspec '3rdLib' do |ss|
+        ss.subspec 'AFNetworking' do |sss|
+            sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
+        end
+
+        ss.subspec 'YYCache' do |sss1|
+            sss1.source_files = 'TQKit/TQKit/3rdLib/YYCache/*'
+        end
+    end
+
+    s.subspec 'Category' do |ss|
+        ss.public_header_files = 'TQKit/TQKit/Category/YYCategoriesMacro.h'
+        ss.source_files = 'TQKit/TQKit/Category/YYCategoriesMacro.h'
+            ss.subspec 'Foundation' do |sss|
+            #sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
+
+            sss.subspec 'NSData' do |ssss|
+            ssss.source_files = 'TQKit/TQKit/Category/Foundation/NSData/*'
+            end
+
+        end
+    end
+
 end
