@@ -32,6 +32,10 @@ s.subspec '3rdLib' do |ss|
     ss.subspec 'AFNetworking' do |sss|
     sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
     end
+
+    ss.subspec 'YYCache' do |sss1|
+    sss1.source_files = 'TQKit/TQKit/3rdLib/YYCache/*'
+    end
 end
 
 end
