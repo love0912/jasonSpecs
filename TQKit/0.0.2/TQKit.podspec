@@ -16,7 +16,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-#s.source_files  = "TQKit/TQKit/TQKit.h"
+  s.source_files  = "TQKit/TQKit/TQKit.h"
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -37,7 +37,6 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
     end
 
     s.subspec 'Category' do |ss|
-#ss.public_header_files = 'TQKit/TQKit/Category/TT_CategoryHeader.h'
         ss.source_files = 'TQKit/TQKit/Category/*.h'
             ss.subspec 'Foundation' do |sss|
                 sss.source_files = 'TQKit/TQKit/Category/Foundation/TT_FoundationHeader.h'
@@ -177,6 +176,14 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         ss.subspec 'Action' do |sss|
             sss.source_files = 'TQKit/TQKit/Core/Action/*.{h,m}', 'TQKit/TQKit/Core/Action/**/*.{h,m}'
             sss.dependency 'TQKit/Utils/TTProgressHUD'
+        end
+        ss.subspec 'Service' do |sss|
+            sss.source_files = 'TQKit/TQKit/Core/Service/*.{h,m}'
+            sss.dependency 'TQKit/Core/Action'
+        end
+        ss.subspec 'TTMediator' do |sss|
+            sss.source_files = 'TQKit/TQKit/Core/TTMediator/*.{h,m}'
+            sss.dependency 'TQKit/Category/Foundation/NSString'
         end
     end
 
