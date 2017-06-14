@@ -16,14 +16,22 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "TQKit/TQKit/**/*"
+#s.source_files  = "TQKit/TQKit/TQKit.h"
   s.exclude_files = "TQKit/TQKit.xcodeproj"
 
    # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit', 'QuartzCore'
   s.libraries   = 'sqlite3', 'z'
-  s.public_header_files = 'TQKit/TQKit/**/*.h'
+#  s.public_header_files = 'TQKit/TQKit/TQKit.h'
 
   s.requires_arc = true
+
+
+s.subspec '3rdLib' do |ss|
+#ss.source_files = 'TQKit/TQKit/3rdLib'
+    ss.subspec 'AFNetworking' do |sss|
+    sss.source_files = 'TQKit/TQKit/3rdLib/AFNetworking/*'
+    end
+end
 
 end
