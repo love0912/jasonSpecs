@@ -168,6 +168,7 @@ s.source       = { :git => "https://github.com/love0912/TQKit.git", :tag => "#{s
         end
         ss.subspec 'UserInfoUtil' do |sss|
             sss.source_files = 'TQKit/TQKit/Utils/UserInfoUtil/*'
+            sss.dependency 'TQKit/Core/Action'
         end
 
     end
